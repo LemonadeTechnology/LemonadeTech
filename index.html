@@ -262,7 +262,7 @@
           }
 
           .hero-content h1 {
-            font-size: clamp(3rem, 8vw, 10rem);
+            font-size: clamp(1rem, 5vw, 10rem);
             font-weight: 900;
             margin-bottom: 1rem;
             opacity: 0;
@@ -834,6 +834,127 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            /* Add this to your CSS file */
+          }
+          #cta {
+            background: linear-gradient(135deg, #92a4f1, #bc94e4);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+          }
+
+          #cta .container {
+            max-width: 800px;
+          }
+
+          #cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 700;
+            background: none; /* Override gradient from JS */
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+          }
+
+          #cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+          }
+
+          #cta .btn {
+            background-color: #fff;
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+          }
+
+          #cta .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+          /* Add this to your CSS file */
+
+          /* Add or replace this CSS in your stylesheet */
+
+          #services {
+            padding: 100px 0;
+            background-color: #1a1a1a;
+            color: #fff;
+          }
+
+          #services .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: -20px;
+            margin-bottom: 50px;
+            opacity: 0.8;
+          }
+
+          .services-grid {
+            display: grid;
+            /* Default: 3x3 grid for large screens */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+          }
+
+          /* Media query for tablets and smaller screens (e.g., 768px and below) */
+          @media (max-width: 768px) {
+            .services-grid {
+              /* Change to a 2x2 grid */
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+
+          /* Media query for mobile phones (e.g., 480px and below) */
+          @media (max-width: 480px) {
+            .services-grid {
+              /* Change to a 1x1 grid */
+              grid-template-columns: 1fr;
+            }
+          }
+
+          .service-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+          }
+
+          .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+          }
+
+          .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+          }
+
+          .service-card p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
           }
         </style>
       </head>
@@ -849,6 +970,7 @@
                 <ul>
                   <li><a href="#hero">Home</a></li>
                   <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
                   <li><a href="#projects">Projects</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -872,11 +994,11 @@
 
           <div class="container">
             <div class="hero-content">
-              <h1>Innovation</h1>
-              <h1>Meets</h1>
-              <h1>Excellence</h1>
+              <h1>Powering Tomorrow's Businesses</h1>
+              <h1>With Cutting-Edge</h1>
+              <h1>Software Solutions</h1>
               <a href="#about" class="btn">
-                <span>Discover More</span>
+                <span>Explore Our Vision</span>
               </a>
             </div>
           </div>
@@ -893,16 +1015,20 @@
               <div class="about-text">
                 <h2>Next-Gen Software Solutions</h2>
                 <p>
-                  At Lemonade Technology, we revolutionize how small businesses
-                  operate in the digital age. Our cutting-edge solutions bridge
-                  the gap between traditional business practices and modern
-                  technology, delivering unprecedented value through innovative
-                  design and seamless user experiences.
+                  At Lemonade Technology, we're not just creating software,
+                  we're building partnerships. We specialize in crafting
+                  next-generation software solutions that help small and
+                  medium-sized businesses thrive in a digital-first world. Our
+                  approach bridges the gap between your current operations and
+                  future potential, delivering unparalleled value through
+                  innovative design and a focus on seamless user experiences.
                 </p>
                 <p>
-                  We specialize in creating custom software solutions that not
-                  only meet your current needs but anticipate future challenges,
-                  ensuring your business stays ahead of the competition.
+                  Our team is dedicated to developing bespoke software that is
+                  scalable, efficient, and specifically tailored to your unique
+                  business needs. We anticipate challenges and engineer
+                  solutions that keep you ahead of the curve, ensuring you're
+                  not just competing, but leading.
                 </p>
                 <a href="#contact" class="btn">
                   <span>Get in Touch</span>
@@ -911,7 +1037,74 @@
             </div>
           </div>
         </section>
+        <section id="services">
+          <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+              We provide a full spectrum of digital solutions to help your
+              business succeed.
+            </p>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Custom Software Development</h3>
+                <p>
+                  From web and desktop applications to powerful mobile apps, we
+                  build bespoke software tailored to your specific needs and
+                  goals.
+                </p>
+              </div>
 
+              <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Web & Mobile App Solutions</h3>
+                <p>
+                  We create responsive, intuitive websites and engaging mobile
+                  apps that provide seamless user experiences and drive results.
+                </p>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>Data Analytics & Business Intelligence</h3>
+                <p>
+                  Leverage your data to make smarter decisions. Our tools and
+                  insights help you understand your business and find new
+                  opportunities for growth.
+                </p>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon">📣</div>
+                <h3>Digital Marketing & SEO</h3>
+                <p>
+                  Boost your online presence with strategic social media
+                  management, targeted marketing campaigns, and search engine
+                  optimization.
+                </p>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>AI & Automation</h3>
+                <p>
+                  Integrate AI-powered solutions to automate tasks, improve
+                  efficiency, and gain a competitive edge in your industry.
+                </p>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>IT Consulting & Strategy</h3>
+                <p>
+                  We offer expert guidance and strategic planning to help you
+                  navigate the complexities of technology and align it with your
+                  business vision.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- Projects Section -->
         <section id="projects">
           <div class="container">
@@ -1000,7 +1193,20 @@
             </div>
           </div>
         </section>
-
+        <section id="cta">
+          <div class="container">
+            <div class="cta-content">
+              <h2>Ready to Transform Your Business?</h2>
+              <p>
+                Let's discuss how our cutting-edge software solutions can help
+                you achieve your goals and stay ahead of the competition.
+              </p>
+              <a href="#contact" class="btn">
+                <span>Schedule a Free Consultation</span>
+              </a>
+            </div>
+          </div>
+        </section>
         <!-- Contact Section -->
         <section id="contact">
           <div class="container">
